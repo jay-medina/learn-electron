@@ -4,7 +4,7 @@ const path = require('path');
 
 electron.app.on('ready',function () {
   var mainWindow = new electron.BrowserWindow({
-    width: 600, height: 800
+    width: 800, height: 600
   });
 
   mainWindow.loadURL(url.format({
