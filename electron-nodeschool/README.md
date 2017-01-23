@@ -9,3 +9,6 @@ Follow the instructions in the github link.
 
 ## Lesson 2
 - Create Hello World
+
+## Lesson 3
+- App a cat picture
