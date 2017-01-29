@@ -16,4 +16,5 @@ Here is the link: [elementary-electron](https://github.com/maxogden/elementary-e
 ### Sound Machine
 
 Tutorial is a bit out of date but this app gets it working
+
 Link to tutorial: https://medium.com/developers-writing/building-a-desktop-application-with-electron-204203eeb658#.l3fp654gv
