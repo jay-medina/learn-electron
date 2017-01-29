@@ -12,3 +12,8 @@ From the quick start on electron site.
 ### Electron NodeSchool
 [NodeSchool.io](https://nodeschool.io/) provides an exercise for learning electron.
 Here is the link: [elementary-electron](https://github.com/maxogden/elementary-electron).
+
+### Sound Machine
+
+Tutorial is a bit out of date but this app gets it working
+Link to tutorial: https://medium.com/developers-writing/building-a-desktop-application-with-electron-204203eeb658#.l3fp654gv

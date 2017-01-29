@@ -6,8 +6,10 @@ let mainWindow = null;
 
 app.on('ready', () => {
     mainWindow = new BrowserWindow({
-        height: 600,
-        width: 800
+        height: 700,
+        width: 368,
+        resizable: false,
+        frame: false
     });
 
     mainWindow.loadURL(url.format({
