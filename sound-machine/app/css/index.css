@@ -1,0 +1,129 @@
+
+html,
+body {
+    box-sizing: border-box;
+    background: #0C7CA2;
+    height: 725px;
+    overflow: hidden;
+    width: 368px;
+    font-size: 16px;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#main {
+    background: #1DCCEB;
+    border-bottom: 1px solid #73E2F7;
+    height: 700px;
+}
+
+.sound-machine--menu-bar {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.sound-machine--settings,
+.sound-machine--close {
+    cursor: pointer;
+    display: inline-block;
+    height: 32px;
+    text-indent: -10000px;
+    top: 6px;
+    width: 32px;
+    z-index: 1;
+}
+
+.sound-machine--settings {
+    background: transparent url('../img/settings.png') no-repeat 4px 4px;
+    background-size: 24px 24px;
+    right: 38px;
+}
+
+.sound-machine--close {
+    background: transparent url('../img/close.png') no-repeat 4px 4px;
+    background-size: 24px 24px;
+    right: 6px;
+}
+
+
+.sound-machine--speaker {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sound-machine--speaker-img {
+    height: 194px;
+    width: 274px;
+}
+
+.sound-machine--logo {
+    color: #fff;
+    padding-right: 6px;
+    padding-top: 5px;
+    text-align: right;
+    text-indent: -10000px;
+    margin-bottom: 4rem;
+}
+
+.sound-machine--logo-img {
+    height: 31px;
+    width: 195px;
+}
+
+.sound-machine--buttons {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.button-sound {
+    background-color: #0C7CA2;
+    border-radius: 12px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0 4px 0 #044D7F;
+    -webkit-app-region: no-drag;
+}
+
+.button-sound:hover {
+    box-shadow: 0 2px 0 #044D7F;
+    top: 2px;
+}
+
+.button-sound:hover > span {
+    top: -42px;
+}
+
+.button-sound:active {
+    box-shadow: 0 0 0 #044D7F;
+    top: 5px;
+}
+
+.button-sound:active > span {
+    top: -45px;
+}
+
+.button-icon {
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 50px;
+    left: 29px;
+    position: absolute;
+    top: -35px;
+    width: 30px;
+    -webkit-app-region: no-drag;
+}
+
+.button-icon--ba-dum {
+    background-image: url("../img/icons/ba-dum-tsss.png")
+}
+
+.button-icon--money {
+    background-image: url("../img/icons/money.png")
+}
