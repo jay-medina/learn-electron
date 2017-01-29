@@ -1,5 +1,6 @@
 
-
+const closeButton = document.querySelector('.sound-machine--close');
+const settingsButton = document.querySelector('.sound-machine--settings');
 const soundMachineBtns = document.querySelectorAll('.sound-machine--buttons');
 const audioFiles = {};
 
@@ -10,6 +11,7 @@ function playAudio(filename) {
      audioFiles[filename].currentTime = 0;
      audioFiles[filename].play();
 }
+
 function onClick(e) {
     const target = e.target;
     let sound;
@@ -23,3 +25,5 @@ function onClick(e) {
 
 soundMachineBtns.forEach(btn => btn.addEventListener('click', onClick));
 
+closeButton.addEventListener('click', e => alert('closebutton click'));
+settingsButton.addEventListener('click', e => alert('settingsbutton click'));

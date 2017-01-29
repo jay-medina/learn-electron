@@ -8,7 +8,7 @@ body {
     width: 368px;
     font-size: 16px;
     -webkit-app-region: drag;
-    -webkit-user-select: none;
+    user-select: none;
 }
 
 .hidden {
