@@ -1,4 +1,4 @@
-
+const {ipcRenderer} = require('electron');
 const closeButton = document.querySelector('.sound-machine--close');
 const settingsButton = document.querySelector('.sound-machine--settings');
 const soundMachineBtns = document.querySelectorAll('.sound-machine--buttons');
@@ -25,5 +25,7 @@ function onClick(e) {
 
 soundMachineBtns.forEach(btn => btn.addEventListener('click', onClick));
 
-closeButton.addEventListener('click', e => alert('closebutton click'));
+closeButton.addEventListener('click', function() {
+    ipcRenderer.send('close-main-window')
+});
 settingsButton.addEventListener('click', e => alert('settingsbutton click'));

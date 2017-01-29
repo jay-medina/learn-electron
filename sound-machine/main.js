@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, ipcMain} = require('electron');
 const path = require('path');
 const url = require('url');
 
@@ -7,7 +7,7 @@ let mainWindow = null;
 app.on('ready', () => {
     mainWindow = new BrowserWindow({
         height: 700,
-        width: 368,
+        width: 380,
         resizable: false,
         frame: false
     });
@@ -17,4 +17,12 @@ app.on('ready', () => {
         protocol: 'file:',
         slashes: true
     }));
+
+   // mainWindow.webContents.openDevTools();
+})
+
+
+
+ipcMain.on('close-main-window', function() {
+    app.quit();
 })
