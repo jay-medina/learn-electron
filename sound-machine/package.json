@@ -2,9 +2,10 @@
   "name": "sound-machine",
   "version": "1.0.0",
   "description": "sample electron app",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/mrfunkycold/learn-electron/issues"
   },
-  "homepage": "https://github.com/mrfunkycold/learn-electron#readme"
+  "homepage": "https://github.com/mrfunkycold/learn-electron#readme",
+  "dependencies": {
+    "electron": "^1.4.15"
+  }
 }
