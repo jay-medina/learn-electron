@@ -5,10 +5,10 @@ body {
     background: #0C7CA2;
     height: 725px;
     overflow: hidden;
-    width: 368px;
+    width: 380px;
     font-size: 16px;
     -webkit-app-region: drag;
-    user-select: none;
+    -webkit-user-select: none;
 }
 
 .hidden {
@@ -23,7 +23,7 @@ body {
 
 .sound-machine--menu-bar {
     text-align: right;
-    margin-bottom: 1rem;
+    margin:1rem;
 }
 
 .sound-machine--settings,
@@ -35,6 +35,7 @@ body {
     top: 6px;
     width: 32px;
     z-index: 1;
+    -webkit-app-region: no-drag;
 }
 
 .sound-machine--settings {
@@ -53,6 +54,7 @@ body {
 .sound-machine--speaker {
     margin-bottom: 1rem;
     text-align: center;
+    cursor: pointer;
 }
 
 .sound-machine--speaker-img {
@@ -62,7 +64,7 @@ body {
 
 .sound-machine--logo {
     color: #fff;
-    padding-right: 6px;
+    padding-right: 1.5rem;
     padding-top: 5px;
     text-align: right;
     text-indent: -10000px;
