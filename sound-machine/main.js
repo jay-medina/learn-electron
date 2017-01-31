@@ -5,7 +5,8 @@ const {app,
       } = require('electron');
 const path = require('path');
 const url = require('url');
-const {CMD_CTRL_1, CMD_CTRL_2} = require('./app/keyShortcuts');
+const keyboardShortcuts = require('./shell/keyboardShortcuts');
+const settingsWindow = require('./shell/settingsWindow');
 
 let mainWindow = null;
 
@@ -23,7 +24,7 @@ app.on('ready', () => {
         slashes: true
     }));
 
-    registerKeyboardInputs(mainWindow.webContents);
+    keyboardShortcuts.registerKeyboardInputs(mainWindow.webContents);
 })
 
 app.on('will-quit', () => {
@@ -36,15 +37,10 @@ ipcMain.on('close-main-window', function() {
     app.quit();
 })
 
-function registerKeyboardInputs(webContents) {
-  globalShortcut.register(CMD_CTRL_1, () => {
-      if(webContents.isFocused()) {
-          webContents.send(CMD_CTRL_1);
-      }    
-  })
-  globalShortcut.register(CMD_CTRL_2, () => {
-      if(webContents.isFocused()) {
-          webContents.send(CMD_CTRL_2);
-      }
-  });
-}
+ipcMain.on('close-settings-window', function() {
+    settingsWindow.close();
+})
+
+ipcMain.on('open-settings-window', function() {
+    settingsWindow.show();
+})

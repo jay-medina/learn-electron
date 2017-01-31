@@ -27,10 +27,8 @@ function onClick(e) {
 
 soundMachineBtns.forEach(btn => btn.addEventListener('click', onClick));
 
-closeButton.addEventListener('click', function() {
-    ipcRenderer.send('close-main-window')
-});
-settingsButton.addEventListener('click', e => alert('settingsbutton click'));
+closeButton.addEventListener('click', () => ipcRenderer.send('close-main-window'));
+settingsButton.addEventListener('click', () =>  ipcRenderer.send('open-settings-window'));
 
  ipcRenderer.on("CommandOrControl+1", function() {
      playAudio('ba-dum-tsss');
