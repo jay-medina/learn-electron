@@ -30,11 +30,11 @@ soundMachineBtns.forEach(btn => btn.addEventListener('click', onClick));
 closeButton.addEventListener('click', () => ipcRenderer.send('close-main-window'));
 settingsButton.addEventListener('click', () =>  ipcRenderer.send('open-settings-window'));
 
- ipcRenderer.on("CommandOrControl+1", function() {
+ ipcRenderer.on("drum", function() {
      playAudio('ba-dum-tsss');
  });
 
 
-ipcRenderer.on("CommandOrControl+2", function() {
+ipcRenderer.on("money", function() {
     playAudio('money');
 });

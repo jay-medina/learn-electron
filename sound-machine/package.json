@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/mrfunkycold/learn-electron#readme",
   "dependencies": {
-    "electron": "^1.4.15"
+    "electron": "^1.4.15",
+    "nconf": "^0.8.4"
   }
 }

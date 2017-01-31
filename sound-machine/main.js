@@ -11,6 +11,8 @@ const settingsWindow = require('./shell/settingsWindow');
 let mainWindow = null;
 
 app.on('ready', () => {
+    keyboardShortcuts.initializeShortcuts();
+    
     mainWindow = new BrowserWindow({
         height: 720,
         width: 370,
