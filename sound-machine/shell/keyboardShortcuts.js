@@ -1,11 +1,11 @@
 const { globalShortcut } = require('electron');
 const configuration = require('./configuration');
-const CMD_CTRL_1 = "CommandOrControl+1"
-const CMD_CTRL_2 = "CommandOrControl+2"
+const CMD_CTRL_1 = 'ctrl+shift+1'
+const CMD_CTRL_2 = "ctrl+shift+2"
 
 function registerKeyboardInputs(webContents) {
   globalShortcut.unregisterAll();
-  var shortcutKeysSettings = configuration.readSettings('shortcutKeys');
+  var shortcutKeysSettings = getShortcutKeys();
    var shortcutPrefix = shortcutKeysSettings.length === 0 ? '' : shortcutKeysSettings.join('+') + '+';
 
   console.log(shortcutPrefix);
@@ -24,12 +24,17 @@ function registerKeyboardInputs(webContents) {
 
 function initializeShortcuts() {
     if (!configuration.readSettings('shortcutKeys')) {
-        configuration.saveSettings('shortcutKeys', ['ctrl', 'shift']);
+        configuration.saveSettings('shortcutKeys', ["ctrl", "shift"]);
     }
+}
+
+function getShortcutKeys() {
+    return configuration.readSettings('shortcutKeys');
 }
 
 module.exports = {
     registerKeyboardInputs,
-    initializeShortcuts
+    initializeShortcuts,
+    getShortcutKeys
 }
 
