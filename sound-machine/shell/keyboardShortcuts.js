@@ -1,7 +1,5 @@
 const { globalShortcut } = require('electron');
 const configuration = require('./configuration');
-const CMD_CTRL_1 = 'ctrl+shift+1'
-const CMD_CTRL_2 = "ctrl+shift+2"
 
 function registerKeyboardInputs(webContents) {
   globalShortcut.unregisterAll();
