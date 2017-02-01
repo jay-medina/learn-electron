@@ -1,4 +1,5 @@
 const {BrowserWindow} = require('electron');
+const keyboardShortcuts = require('./keyboardShortcuts');
 const path = require('path');
 const url = require('url');
 
@@ -19,6 +20,7 @@ function show() {
     }));
     
     settingsWindow.on('closed', () => settingsWindow = null);
+    settingsWindow.webContents.send('initShortcutKeys', keyboardShortcuts.getShortcutKeys());
 }
 
 function close() {
