@@ -30,9 +30,28 @@ function getShortcutKeys() {
     return configuration.readSettings('shortcutKeys');
 }
 
+function updateShortcutKeys(webContents, key, selected) {
+    const shortcutKeys = getShortcutKeys();
+
+    if(shortcutKeys.includes(key)) {
+        const filtered = shortcutKeys.filter(sKey => {
+            return sKey !== key || selected;
+        })
+
+        configuration.saveSettings('shortcutKeys', filtered);
+    }
+    else if(selected) {
+        shortcutKeys.push(key)
+        configuration.saveSettings('shortcutKeys', shortcutKeys);
+    }
+
+    registerKeyboardInputs(webContents);
+}
+
 module.exports = {
     registerKeyboardInputs,
     initializeShortcuts,
-    getShortcutKeys
+    getShortcutKeys,
+    updateShortcutKeys
 }
 

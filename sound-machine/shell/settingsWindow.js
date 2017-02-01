@@ -20,7 +20,14 @@ function show() {
     }));
     
     settingsWindow.on('closed', () => settingsWindow = null);
-    settingsWindow.webContents.send('initShortcutKeys', keyboardShortcuts.getShortcutKeys());
+    settingsWindow.webContents.openDevTools();
+    initShortcutKeys(settingsWindow.webContents);
+}
+
+function initShortcutKeys(webContents) {
+    webContents.on('dom-ready', function() {
+        webContents.send('initShortcutKeys', keyboardShortcuts.getShortcutKeys());
+    })
 }
 
 function close() {

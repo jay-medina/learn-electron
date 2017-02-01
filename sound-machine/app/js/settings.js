@@ -9,9 +9,13 @@ close.addEventListener('click', function() {
 function updateShortcutSettings(checkbox) {
      const {modifierKey} = checkbox.dataset;
      console.log(modifierKey);
+     ipcRenderer.send('update-keyboard-shortcut', {
+         key: modifierKey,
+         selected: checkbox.checked
+     });
 }
 
-ipcRenderer.on('initShortcutKeys', function(keyArray) {
+ipcRenderer.on('initShortcutKeys', function(_, keyArray) {
     const checkboxes = document.querySelectorAll('.global-shortcut');
 
     checkboxes.forEach(checkbox => {
@@ -22,6 +26,4 @@ ipcRenderer.on('initShortcutKeys', function(keyArray) {
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('click', () => updateShortcutSettings(checkbox));
     });
-
-
 });
