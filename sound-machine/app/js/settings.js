@@ -7,7 +7,7 @@ close.addEventListener('click', function() {
 
 function updateShortcutSettings(checkbox) {
      const {modifierKey} = checkbox.dataset;
-     console.log(modifierKey);
+
      ipcRenderer.send('update-keyboard-shortcut', {
          key: modifierKey,
          selected: checkbox.checked

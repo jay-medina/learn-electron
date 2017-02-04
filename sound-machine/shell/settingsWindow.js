@@ -6,6 +6,11 @@ const url = require('url');
 let settingsWindow;
 function show() {
 
+    if(settingsWindow) {
+        settingsWindow.focus();
+        return;
+    }
+
     settingsWindow = new BrowserWindow({
             height: 300,
             width: 200,
