@@ -3,7 +3,7 @@ const {ipcRenderer} = require('electron');
 const closeButton = document.querySelector('.sound-machine--close');
 const settingsButton = document.querySelector('.sound-machine--settings');
 const soundMachineBtns = document.querySelectorAll('.sound-machine--buttons');
-const body = document.querySelector('body');
+
 const audioFiles = {};
 
 function playAudio(filename) {
@@ -27,16 +27,14 @@ function onClick(e) {
 
 soundMachineBtns.forEach(btn => btn.addEventListener('click', onClick));
 
-closeButton.addEventListener('click', function() {
-    ipcRenderer.send('close-main-window')
-});
-settingsButton.addEventListener('click', e => alert('settingsbutton click'));
+closeButton.addEventListener('click', () => ipcRenderer.send('close-main-window'));
+settingsButton.addEventListener('click', () =>  ipcRenderer.send('open-settings-window'));
 
- ipcRenderer.on("CommandOrControl+1", function() {
+ ipcRenderer.on("drum", function() {
      playAudio('ba-dum-tsss');
  });
 
 
-ipcRenderer.on("CommandOrControl+2", function() {
+ipcRenderer.on("money", function() {
     playAudio('money');
 });
