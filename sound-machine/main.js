@@ -48,7 +48,6 @@ ipcMain.on('open-settings-window', function() {
     settingsWindow.show();
 })
 
-ipcMain.on('update-keyboard-shortcut', function(events, {key, selected}) {
-    console.log(key, selected);
-    keyboardShortcuts.updateShortcutKeys(events.sender, key, selected);
+ipcMain.on('update-keyboard-shortcut', function(_, {key, selected}) {
+    keyboardShortcuts.updateShortcutKeys(mainWindow.webContents, key, selected);
 })

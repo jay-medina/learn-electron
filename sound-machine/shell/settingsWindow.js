@@ -20,7 +20,6 @@ function show() {
     }));
     
     settingsWindow.on('closed', () => settingsWindow = null);
-    settingsWindow.webContents.openDevTools();
     initShortcutKeys(settingsWindow.webContents);
 }
 

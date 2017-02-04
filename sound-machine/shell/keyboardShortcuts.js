@@ -6,7 +6,6 @@ function registerKeyboardInputs(webContents) {
   var shortcutKeysSettings = getShortcutKeys();
    var shortcutPrefix = shortcutKeysSettings.length === 0 ? '' : shortcutKeysSettings.join('+') + '+';
 
-  console.log(shortcutPrefix);
 
   globalShortcut.register(shortcutPrefix+'1', () => {
       if(webContents.isFocused()) {
