@@ -1,8 +1,18 @@
-const {ipcRenderer} = require('electron');
+const {ipcRenderer, remote} = require('electron');
+const trayMenu = remote.require('./shell/trayMenu');
 
 const closeButton = document.querySelector('.sound-machine--close');
 const settingsButton = document.querySelector('.sound-machine--settings');
 const soundMachineBtns = document.querySelectorAll('.sound-machine--buttons');
+
+trayMenu.setup({
+    onSettings() {
+        ipcRenderer.send('open-settings-window');
+    },
+    onQuit() {
+        ipcRenderer.send('close-main-window');
+    }
+})
 
 const audioFiles = {};
 
