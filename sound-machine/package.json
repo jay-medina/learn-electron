@@ -4,8 +4,9 @@
   "description": "sample electron app",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "packageWIN32": "electron-packager ./ SoundMachine --platform=win32  --icon=./app/img/app-icon.ico",
+    "packageOSX": "electron-packager ./ SoundMachine --platform=mas --icon=./app/img/app-icon.icns"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
   "dependencies": {
     "electron": "^1.4.15",
     "nconf": "^0.8.4"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.5.1"
   }
 }
