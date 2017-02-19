@@ -1,0 +1,22 @@
+{
+  "name": "spectron-example",
+  "version": "1.0.0",
+  "description": "Spectron with Jasmine example",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "",
+    "start": "electron ."
+  },
+  "repository": "https://github.com/mrfunkycold/learn-electron",
+  "author": "Jose M Medina",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "jasmine": "^2.5.3",
+    "rimraf": "^2.6.0",
+    "spectron": "^3.6.0"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.0.1"
+  }
+}
