@@ -6,7 +6,7 @@ I will be providing a link to where the demo is coming from.
 Each section will correspond to the folder listed.
 
 ### Spectron Jasmine
-Creates a demo electron app to demo spectron. [Spectron](https://github.com/electron/spectron) is a testing integration tool written on top of ChromeDriver and WebDriverIO.
+Creates a demo electron app to demo spectron. [Spectron](https://github.com/electron/spectron) is a testing integration tool written on top of ChromeDriver and WebDriverIO. Demo uses [Jasmine](https://jasmine.github.io/) testing framework.
 - Documentation for Spectron: https://github.com/electron/spectron
 - Documentation for WebDriverIO: http://webdriver.io/
 
