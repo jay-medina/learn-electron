@@ -4,7 +4,7 @@
   "description": "Spectron with Jasmine example",
   "main": "src/index.js",
   "scripts": {
-    "test": "jasmine tests/*spec.js",
+    "test": "jasmine test/*spec.js",
     "start": "electron ."
   },
   "repository": "https://github.com/mrfunkycold/learn-electron",
