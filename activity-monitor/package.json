@@ -2,7 +2,7 @@
   "name": "activity-monitor",
   "version": "1.0.0",
   "description": "sample activity monitor",
-  "main": "src/index.js",
+  "main": "src/main.js",
   "repository": {},
   "scripts": {
     "start": "electron ."

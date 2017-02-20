@@ -7,8 +7,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceRoot}/src/index.js",
+      "name": "Debug Main Process",
+      "program": "${workspaceRoot}/src/main.js",
       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
       "cwd": "${workspaceRoot}"
     }
