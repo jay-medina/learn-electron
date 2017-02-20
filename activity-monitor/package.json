@@ -1,0 +1,16 @@
+{
+  "name": "activity-monitor",
+  "version": "1.0.0",
+  "description": "sample activity monitor",
+  "main": "src/index.js",
+  "repository": {},
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "jose m medina",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^2.5.0",
+    "electron": "^1.4.15"
+  }
+}
